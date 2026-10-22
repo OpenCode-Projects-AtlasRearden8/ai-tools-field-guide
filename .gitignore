@@ -1,5 +1,11 @@
-site/
-.test-site/
-node_modules/
 *.log
+*.pyc
 .DS_Store
+.env
+.env.*
+.test-site/
+.venv/
+__pycache__/
+dist/*.tmp
+node_modules/
+site/
