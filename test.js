@@ -42,7 +42,7 @@ for (const [name, pageHtml] of Object.entries(html)) {
   check('site/' + name + ' has main content', pageHtml.includes('<main class="content">'))
   check('site/' + name + ' has copyright credit', pageHtml.includes('Copyright (c) 2026 Asdale Dynamics, LLC'))
   check('site/' + name + ' has no leftover placeholders', !pageHtml.includes('\u0000'))
-  check('site/' + name + ' has unrendered code fences', !pageHtml.includes('```'))
+  check('site/' + name + ' has no unrendered code fences', !pageHtml.includes('```'))
 }
 
 for (const [name, pageHtml] of Object.entries(html)) {

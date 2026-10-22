@@ -1,6 +1,6 @@
 # STATUS — The Beginner's Field Guide to AI Tools
 
-**Date:** 2026-10-22 · **Owner:** Asdale Dynamics, LLC (Dylan Asdale)
+**Date:** 2026-10-22 (finished build verified) · **Owner:** Asdale Dynamics, LLC (Dylan Asdale)
 
 ## What was built
 
@@ -50,15 +50,16 @@ works offline, no accounts, no keys, no tracking.
   - README credits Asdale Dynamics, LLC
   - markdown unit tests (bold, italic, inline code, links, lists, ordered lists,
     blockquotes, tables, code fences) all render correctly
-  - no unresolved template placeholders, no unrendered code fences
-- `node serve.js` — verified live: `index` and lesson pages return HTTP 200,
-  unknown paths return 404.
+   - no unresolved template placeholders, no unrendered code fences
+- `node serve.js` — verified live: `index`, lesson pages, and `styles.css` return
+  HTTP 200; unknown paths return 404; path-traversal attempts
+  (`/../package.json`, `/%2e%2e/package.json`) are rejected with 403.
 - Manually spot-checked rendered HTML for the trickiest structures (numbered
   try-it-now steps with embedded prompt blockquotes; the search-tools table).
 
 ## Known gaps
 
-- **Site section autofrom-docs:** the build's page list is explicit in
+- **Site sections not auto-derived from docs:** the build's page list is explicit in
   `build.js` (`PAGES`). Adding a new lesson requires adding one line there.
   Documented in the README.
 - **No RSS/search box:** fine for a short field guide; a client-side content
@@ -71,3 +72,8 @@ works offline, no accounts, no keys, no tracking.
 - **Naming conventions turn over:** tool names and free tiers (ChatGPT, Gemini,
   Otter, Perplexity, etc.) were written as of Oct 2026 and may change; the
   lessons are written so the *moves* stay valid even if logos shift.
+
+## Status
+
+**Complete.** Build, test suite, preview server, LICENSE, README credit, and all
+ten lessons verified on 2026-10-22.
